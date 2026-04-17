@@ -1,12 +1,8 @@
----
-title: EX06 - Click the Bubble
-tags: OOP, C++, Raylib, Design Patterns
----
-
 # EX06 - Click the Bubble
 
-[toc]
-
+---
+### 系級：心理二
+### 學號：112702005
 ---
 
 ## 專案概述
@@ -153,7 +149,3 @@ cmake --build build
 | `resources/star.png` | 星星材質 | 黃色圓圈替代 |
 
 ---
-
-## 學號
-
-112702005

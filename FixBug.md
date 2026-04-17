@@ -1,12 +1,8 @@
+# EX06 Bug 修復紀錄
+
 ---
 title: EX06 Bug 修復紀錄
 tags: OOP, C++, debugging
----
-
-# EX06 Bug 修復紀錄
-
-[toc]
-
 ---
 
 ## 修復總覽
