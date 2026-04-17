@@ -200,6 +200,7 @@ void Entity::setVelocity(float nvx, float nvy) {
 }
 ```
 
+### P.S.: 最後改為進入 Hell 模式下不要碰撞，允許穿透
 ---
 
 ## 最終驗證
