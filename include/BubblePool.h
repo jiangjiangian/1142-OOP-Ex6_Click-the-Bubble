@@ -1,14 +1,5 @@
+// File: BubblePool.h — 物件池，管理 Bubble 的 allocate/active lifecycle
 // ── BubblePool.h ───────────────────────────────────────────
-// Object Pool Pattern.
-//
-// Pre-allocates POOL_SIZE Bubble objects.  During gameplay, acquire()
-// takes a slot from the free stack and inits it; release() marks it
-// available again.  Zero heap allocation after construction.
-//
-// Also owns the World-level spawn timers and collision logic that were
-// previously scattered in World::update().  High cohesion: everything
-// about bubble lifecycle lives here.
-// ──────────────────────────────────────────────────────────
 #ifndef BUBBLEPOOL_H
 #define BUBBLEPOOL_H
 

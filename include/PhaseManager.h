@@ -1,5 +1,5 @@
+// File: PhaseManager.h — 依得分與難度計算階段參數的輔助工具
 // ── PhaseManager.h ─────────────────────────────────────────
-// PhaseManager is a pure computation helper. No state beyond
 // the chosen difficulty.  It never renders, never spawns, never
 // touches EventBus — it only answers "what config applies now?"
 //

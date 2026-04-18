@@ -1,5 +1,5 @@
+// File: Star.h — 星星物件介面（生命週期、生成與渲染）
 // ── Star.h ─────────────────────────────────────────────────
-// Star is a power-up collectible that drifts across the screen.
 // Lifetime: STAR_LIFETIME seconds, then auto-kills itself.
 // Rendering shows a countdown arc so the player sees urgency.
 // ──────────────────────────────────────────────────────────

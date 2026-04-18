@@ -1,5 +1,5 @@
+// File: BubbleFactory.h — 工廠 (Bubble 建構邏輯)，封裝顏色/分數/位置計算
 // ── BubbleFactory.h ────────────────────────────────────────
-// Factory Pattern.
 // Centralises bubble construction logic.
 // Eliminates the Long Parameter List smell:
 //   BEFORE: spawnBubble(bool forceRed, const Player&, PhaseConfig, bool hell)

@@ -1,5 +1,5 @@
+// File: GameStates.h — 三個具體 State 的宣告 (Menu/Playing/Paused)
 // ── GameStates.h ───────────────────────────────────────────
-// Three concrete State Pattern implementations:
 //   MenuState    — difficulty select + how-to-play screen
 //   PlayingState — all gameplay (phases 1-3 + hell via hellMode flag)
 //   PausedState  — pause overlay on top of frozen game world

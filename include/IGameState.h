@@ -1,5 +1,5 @@
+// File: IGameState.h — 抽象 State 介面 (onEnter/onExit/update/render)
 // ── IGameState.h ───────────────────────────────────────────
-// State Pattern — abstract interface.
 //
 // Each GameState (Menu, Playing, Paused) encapsulates its own:
 //   - input handling

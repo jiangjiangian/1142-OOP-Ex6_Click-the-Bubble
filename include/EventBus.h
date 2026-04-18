@@ -1,5 +1,5 @@
+// File: EventBus.h — 事件總線 (Observer pattern) 的輕量實作
 // ── EventBus.h ─────────────────────────────────────────────
-// Observer Pattern implementation.
 // EventBus is a Singleton; call EventBus::get() anywhere.
 // Usage:
 //   EventBus::get().subscribe<ScoreChangedEvent>([](const ScoreChangedEvent& e){...});

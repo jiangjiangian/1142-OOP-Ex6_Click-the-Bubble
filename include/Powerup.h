@@ -1,5 +1,5 @@
+// File: Powerup.h — 管理星星道具的生成、載入與行為 (延遲載入資源)
 // ── Powerup.h ──────────────────────────────────────────────
-// Powerup manages the Star entity and texture.
 // It is DECOUPLED from BubblePool intentionally:
 //   - When the star is clicked, it tells Player to activatePowerup().
 //   - Player publishes PowerupActivatedEvent.

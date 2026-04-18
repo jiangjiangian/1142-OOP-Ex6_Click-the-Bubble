@@ -1,5 +1,6 @@
 // ── UIManager.cpp ──────────────────────────────────────────
 #include "UIManager.h"
+#include "Log.h"
 #include <cstdio>
 #include <cmath>
 #include <cstring>
@@ -25,14 +26,14 @@ void UIManager::init() {
     for (int i=0; FONT_CANDIDATES[i]; ++i) {
         const char* p = FONT_CANDIDATES[i];
         if (FileExists(p)) {
-            Font f = LoadFont(p);
-            if (f.texture.id != 0) {
-                font = f;
-                customFontLoaded = true;
-                printf("[UIManager] loaded font: %s\n", p);
-                return;
+                Font f = LoadFont(p);
+                if (f.texture.id != 0) {
+                    font = f;
+                    customFontLoaded = true;
+                    Log::info("[UIManager] loaded font: %s", p);
+                    return;
+                }
             }
-        }
     }
     // fallback
     font = GetFontDefault();

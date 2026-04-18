@@ -1,5 +1,5 @@
+// File: Player.h — 玩家狀態（分數、道具計時與事件發佈）
 // ── Player.h ───────────────────────────────────────────────
-// PlayerT owns the score and powerup state.
 // High cohesion: only player-state logic here.
 // Low coupling: communicates outward ONLY via EventBus events,
 //   never holds references to BubblePool, UIManager, etc.

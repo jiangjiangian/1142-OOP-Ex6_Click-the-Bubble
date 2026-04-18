@@ -1,13 +1,5 @@
+// File: AudioManager.h — 音效管理器 (Singleton), 載入/播放音效
 // ── AudioManager.h ─────────────────────────────────────────
-// Singleton Pattern for audio.
-// Responsibilities: load sounds, expose play methods.
-// No other class holds a Sound handle — they call AudioManager::get().
-//
-// Why Singleton here?
-//   Sound resources are global, exactly one device exists,
-//   and callers (GameStates, BubblePool) must not carry
-//   Sound references around — that creates coupling.
-// ──────────────────────────────────────────────────────────
 #ifndef AUDIOMANAGER_H
 #define AUDIOMANAGER_H
 

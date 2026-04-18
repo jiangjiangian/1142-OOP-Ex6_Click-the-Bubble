@@ -214,3 +214,42 @@ cmake --build build
 :::success
 編譯無錯誤、無警告。遊戲正常啟動，Hell 模式可穩定執行 10 分鐘以上。
 :::
+
+---
+
+## Code Cleanups (非功能性修正)
+
+| # | 變更 | 影響檔案 |
+|:--|:-----|:---------|
+| 6 | 修正 `InputHandler.h` 的註解，反映實際回傳型態 `std::unique_ptr<ICommand>` 與所有權語意（caller take ownership） | `include/InputHandler.h` |
+| 7 | 在 `README.md` 開頭新增完整專案檔案樹，方便快速瀏覽專案結構 | `README.md` |
+
+這些改動為文件與註解層級的清理，沒有改變程式邏輯或執行順序。
+
+| 8 | 在所有 `include/*.h` 頂端加入統一格式的檔案說明（`// File: <name> — <desc>`） | `include/*.h` |
+
+### Header file descriptions
+
+已於每個標頭檔頂端加入一行簡短說明，方便查閱：
+
+- `AudioManager.h`: 音效管理器 (載入/播放音效，Singleton)
+- `Bubble.h`: `Bubble` 類別介面（組合式元件：Entity/RenderComp/MetaComp）
+- `BubbleFactory.h`: 工廠，封裝顏色/分數/生成位置邏輯
+- `BubblePool.h`: 物件池，管理泡泡的 allocate/active lifecycle
+- `Commands.h`: Command pattern 的介面與具體命令
+- `Config.h`: 全域常數、遊戲參數、事件與 enum 定義
+- `Entity.h`: `Entity` 基底類別（位置/速度/生命週期）
+- `EventBus.h`: 事件總線 (Observer pattern) 的輕量實作
+- `GameManager.h`: 遊戲總控 (orchestrator)，擁有子系統並管理主迴圈
+- `GameStates.h`: 三個具體 State 的宣告（Menu/Playing/Paused）
+- `IGameState.h`: 抽象 State 介面（onEnter/onExit/update/render）
+- `InputHandler.h`: 將輸入轉為 `ICommand` 的轉譯層（Command pattern）
+- `PhaseManager.h`: 計算當前得分與難度下的 PhaseConfig
+- `Player.h`: 玩家狀態（分數、powerup 計時與事件發佈）
+- `Powerup.h`: 管理星星道具的生成、載入與行為（延遲載入）
+- `README.md` (include/): include 資料夾的內部說明
+- `Star.h`: 星星物件介面（生命週期、生成與渲染）
+- `StateMachine.h`: 管理狀態註冊與切換，委派 update/render
+- `UIManager.h`: UI / HUD 繪製輔助（字型、按鈕、文字測量）
+
+這些描述是簡短的一行說明，目的是讓開發者快速知道每個標頭檔的角色與責任。若要我把這些說明同步回 `README.md` 或列印成單獨文件，我可以接著做。

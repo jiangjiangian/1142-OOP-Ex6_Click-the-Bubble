@@ -1,5 +1,5 @@
+// File: Commands.h — Command pattern interfaces and concrete commands
 // ── Commands.h ─────────────────────────────────────────────
-// Command Pattern.
 //
 // Encapsulates player actions as objects.
 // Benefits:

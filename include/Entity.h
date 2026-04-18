@@ -1,5 +1,5 @@
+// File: Entity.h — `Entity` 基底類別（位置/速度/生命週期與共用行為）
 // ── Entity.h ───────────────────────────────────────────────
-// Base class for all game world objects.
 // Provides: position/velocity (Transform), lifecycle (alive/kill),
 // and virtual dispatch for update/draw/isClicked.
 //

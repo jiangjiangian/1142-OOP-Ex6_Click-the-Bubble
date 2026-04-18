@@ -5,6 +5,54 @@
 ### 學號：112702005
 ---
 
+## 專案檔案樹 (Project Tree)
+
+```
+CMakeLists.txt
+FixBug.md
+README.md
+include/
+	AudioManager.h
+	Bubble.h
+	BubbleFactory.h
+	BubblePool.h
+	Commands.h
+	Config.h
+	Entity.h
+	EventBus.h
+	GameManager.h
+	GameStates.h
+	IGameState.h
+	InputHandler.h
+	PhaseManager.h
+	Player.h
+	Powerup.h
+	README.md
+	Star.h
+	StateMachine.h
+	UIManager.h
+resources/
+	README.md
+src/
+	AudioManager.cpp
+	Bubble.cpp
+	BubbleFactory.cpp
+	BubblePool.cpp
+	Commands.cpp
+	Entity.cpp
+	GameManager.cpp
+	GameStates.cpp
+	InputHandler.cpp
+	main.cpp
+	Player.cpp
+	Powerup.cpp
+	README.md
+	Star.cpp
+	StateMachine.cpp
+	UIManager.cpp
+```
+
+
 ## 專案概述
 
 使用 **C++17 + Raylib** 實作的泡泡點擊遊戲，將原始 553 行單體 `GameT` 重構為 **21 個類別 + 7 種設計模式**。

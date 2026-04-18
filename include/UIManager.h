@@ -1,5 +1,5 @@
+// File: UIManager.h — UI / HUD 繪製輔助（字型、按鈕、文字測量）
 // ── UIManager.h ────────────────────────────────────────────
-// Pure static rendering helper.
 // UIManager owns NO state — all data comes in as parameters.
 // High cohesion: only drawing code lives here.
 // Low coupling: knows nothing about GameManager or BubblePool.

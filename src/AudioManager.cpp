@@ -1,5 +1,6 @@
 // ── AudioManager.cpp ───────────────────────────────────────
 #include "AudioManager.h"
+#include "Log.h"
 #include <cstdio>
 
 void AudioManager::load() {
@@ -8,7 +9,7 @@ void AudioManager::load() {
     // BUG FIX: guard with IsAudioDeviceReady() so LoadSound
     // is never called before InitAudioDevice() or when it failed.
     if (!IsAudioDeviceReady()) {
-        fprintf(stderr, "[AudioManager] device not ready — pop.wav skipped\n");
+        Log::warn("[AudioManager] device not ready — pop.wav skipped");
         return;
     }
     // Try several candidate relative paths to be robust against different
@@ -27,9 +28,9 @@ void AudioManager::load() {
         popSound = LoadSound(used);
         SetSoundVolume(popSound, masterVol);
         popLoaded = true;
-        printf("[AudioManager] loaded pop sound: %s\n", used);
+        Log::info("[AudioManager] loaded pop sound: %s", used);
     } else {
-        fprintf(stderr, "[AudioManager] pop.wav not found in expected paths\n");
+        Log::warn("[AudioManager] pop.wav not found in expected paths");
     }
 }
 

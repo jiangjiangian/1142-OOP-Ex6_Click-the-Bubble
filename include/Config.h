@@ -1,3 +1,4 @@
+// File: Config.h — 全域常數、遊戲參數與事件/enum 定義
 // ── Config.h ───────────────────────────────────────────────
 #ifndef CONFIG_H
 #define CONFIG_H

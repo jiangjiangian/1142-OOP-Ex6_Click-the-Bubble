@@ -6,11 +6,12 @@
 // NEVER touches BubblePool, Player, or rendering directly.
 //
 // GameManager calls processClick() each frame when a click fires.
-// The returned ICommand* is executed immediately; ownership stays here
-// (static storage — no heap allocation for simple commands).
+// The returned command is returned as a std::unique_ptr<ICommand>.
+// The caller takes ownership, calls execute() and may optionally
+// store the command for replay/history by moving the pointer.
 //
-// For a game recording / replay system, you would store the returned
-// commands in a history buffer before calling execute().
+// For a game recording / replay system, move the returned command into
+// a history buffer before calling execute() so it can be replayed later.
 // ──────────────────────────────────────────────────────────
 #ifndef INPUTHANDLER_H
 #define INPUTHANDLER_H

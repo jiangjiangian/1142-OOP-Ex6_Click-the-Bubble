@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Export compile_commands.json so editors (IntelliSense) can read exact
+# compiler flags and include paths used by CMake. This fixes "cannot open
+# source file \"raylib.h\"" squiggles in VS Code when the build succeeds.
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 

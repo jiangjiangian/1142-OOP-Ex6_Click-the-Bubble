@@ -1,5 +1,5 @@
+// File: StateMachine.h — 管理狀態註冊與切換，委派 update/render
 // ── StateMachine.h ─────────────────────────────────────────
-// State Pattern — manages state lifetime and transitions.
 //
 // Owns all three IGameState instances.
 // transition() calls onExit → swap pointer → onEnter.

@@ -1,5 +1,5 @@
+// File: GameManager.h — 遊戲總控 (orchestrator)；擁有各子系統並管理主迴圈
 // ── GameManager.h ──────────────────────────────────────────
-// Singleton Pattern — single entry point for all subsystems.
 //
 // GameManager owns:
 //   - All subsystem instances (Player, BubblePool, Powerup, …)

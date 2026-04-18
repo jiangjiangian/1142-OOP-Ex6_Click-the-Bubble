@@ -1,5 +1,5 @@
+// File: Bubble.h — `Bubble` 類別介面 (組合元件: Entity/RenderComp/MetaComp)
 // ── Bubble.h ───────────────────────────────────────────────
-// Component Pattern: Bubble composes three inner components.
 //
 //  Entity (base)   = Transform component  (x,y,vx,vy,radius,alive)
 //  RenderComp      = color, pop animation

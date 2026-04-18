@@ -1,6 +1,7 @@
 // ── GameManager.cpp ────────────────────────────────────────
 #include "GameManager.h"
 #include "GameStates.h"
+#include "Log.h"
 #include <cstdio>
 
 // ════════════════════════════════════════════════════════════
@@ -46,17 +47,17 @@ void GameManager::wireEvents() {
     bus.subscribe<PowerupExpiredEvent>([this](const PowerupExpiredEvent&) {
         bubblePool.reset();
         // Small visual cue: briefly flash the powerup bar area handled by draw()
-        printf("[Observer] PowerupExpired → bubblePool.reset()\n");
+        Log::info("[Observer] PowerupExpired → bubblePool.reset()");
     });
 
     // ── HellModeStartedEvent → log / future: play jingle ────
     bus.subscribe<HellModeStartedEvent>([](const HellModeStartedEvent&) {
-        printf("[Observer] Hell mode started!\n");
+        Log::info("[Observer] Hell mode started!");
     });
 
     // ── PhaseChangedEvent → log (hook for sound / effects) ──
     bus.subscribe<PhaseChangedEvent>([](const PhaseChangedEvent& e) {
-        printf("[Observer] Phase changed → %d\n", e.phase);
+        Log::info("[Observer] Phase changed → %d", e.phase);
     });
 }
 
