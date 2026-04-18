@@ -251,5 +251,3 @@ cmake --build build
 - `Star.h`: 星星物件介面（生命週期、生成與渲染）
 - `StateMachine.h`: 管理狀態註冊與切換，委派 update/render
 - `UIManager.h`: UI / HUD 繪製輔助（字型、按鈕、文字測量）
-
-這些描述是簡短的一行說明，目的是讓開發者快速知道每個標頭檔的角色與責任。若要我把這些說明同步回 `README.md` 或列印成單獨文件，我可以接著做。
